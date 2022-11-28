@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <title>Add User</title>
+        <style>
+                #user-form {
+                    display: flex;
+                    flex-direction: column;
+                }
+                #form-div{
+                    border:1px solid black;
+                    width: 25%;
+                    margin: auto;
+                    padding: 10px;
+                }
+                #div-form-header{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                }
+                #submit-button{
+                   width:25%;
+                   text-align: left;
+                }
+
+        </style>
+    </head>
+
+    <body>
+        <div id="form-div">
+            <div id="div-form-header"><a href="/"><button style="background-color:# 4267B2">X</button></a></div>
+
+            <form id="user-form"action="#" th:action="@{create-user}" th:object="${userModel}" method="post">
+                <h2>Create Profile</h2>
+                <label>Username</label>
+                <input th:field="*{username}" type="text" />
+                <label>Password</label>
+                <input th:field="*{password}" type="text" />
+                <label>Firstname</label>
+                <input th:field="*{firstname}" type="text" />
+                <label>Lastname</label>
+                <input th:field="*{lastname}" type="text" />
+                <label>Email</label>
+                <input th:field="*{email}" type="text" />
+                <button id="submit-button" type="submit">Create Profile</button>
+            </form>
+
+        </div>
+</body>
+</html>

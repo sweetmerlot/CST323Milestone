@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <style>
+                #login {
+                    display: flex;
+                    flex-direction: column;
+                }
+                #login-border{
+                    width: 50%;
+                    margin: auto;
+                    padding: 10px;
+                }
+        </style>
+    </head>
+    <body>
+        <div id="login-border" style = "border: 1px solid black"; >
+            <h1>Login or Sign Up</h1>
+
+            <h3>Login</h3>
+            <form id="login">
+                <label>Username:</label>
+                <input/>
+                <label>Password:</label>
+                <input/>
+
+            </form>
+            <h4>Sign Up</h4>
+            <form action="#" th:action="@{user/create-user}">
+                <button type="submit">Create Profile</button>
+            </form>
+        </div>
+    </body>
+
+</html>
